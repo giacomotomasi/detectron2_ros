@@ -10,6 +10,8 @@ project(detectron2_ros)
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   nav_msgs
+  roscpp
+  rospy
   sensor_msgs
 )
 
@@ -105,7 +107,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES detectron2_ros
-#  CATKIN_DEPENDS geometry_msgs nav_msgs sensor_msgs
+#  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy sensor_msgs
 #  DEPENDS system_lib
 )
 
