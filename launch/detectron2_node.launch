@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${node}] [${line}]: ${message}"/>
+
+    <!-- LOAD VISION PARAMS -->
+    <rosparam file="$(find detectron2_ros)/config/vision.yaml" />
+
+    <!-- LAUNCH CAMERA WITH POINTCLOUD -->
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+      <!-- <arg name="filters"      value="pointcloud"/> -->
+    </include>
+
+    <node pkg="detectron2_ros" type="detectron2_ros.py" name="detectron2_ros" output="screen" />
+</launch>

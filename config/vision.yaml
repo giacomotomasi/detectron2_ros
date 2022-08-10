@@ -1,0 +1,12 @@
+camera_topic:
+    topic: /camera/color/image_raw
+image:
+    height: 1280
+    width: 720
+    depth: 3 #rgb, depth=4 if rgba
+model:
+    name: COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml
+    weights: COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml
+visualization:
+    all_classes: true # if true, target will be skipped, if false, target will be used
+    target: 47
